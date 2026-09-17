@@ -1,0 +1,17 @@
+<info-page [pageName]="pageName">
+    <ng-content></ng-content>
+    @if (isCreateEnabled())
+    {
+    <div class="form-group">
+        <button class="btn btn-success" (click)="onCreateEntryClick()">
+            <i class="bi-plus me-1"></i>
+            {{ `${pageName}CreateEntryButton` | translate }}
+        </button>
+    </div>
+    <hr>
+    }
+    @if (dtOptions)
+    {
+    <table datatable [dtOptions]="dtOptions" class="table table-striped"></table>
+    }
+</info-page>

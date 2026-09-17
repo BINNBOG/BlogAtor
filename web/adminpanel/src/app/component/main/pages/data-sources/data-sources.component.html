@@ -1,0 +1,27 @@
+<ng-template #sourceNameColumn let-data="adtData">
+    <a routerLink="/datasource/{{ data.id }}/collectors">{{ data.name }}</a>
+</ng-template>
+
+<ng-template #actionsColumn let-data="adtData">
+    <button class="btn btn-danger" (click)="elementDeletter(data.id.toString())"><i class="bi-trash"></i></button>
+</ng-template>
+
+
+<table-page [pageName]="'dataSources'" 
+            [elementsGetter]="elementsGetter.bind(that)"
+
+            [columnOptions]="columns"
+            
+            [elementDeletter]="elementDeletter.bind(that)"
+            
+            [createEntryModalComponent]="createModalComponent"
+            [elementCreator]="elementCreator.bind(that)">
+    <div class="btn-group pb-2" role="group">
+        <button class="btn btn-primary" (click)="exportDataSources()">
+            <i class="bi-download me-1"></i>{{ 'dataSourcesPageExportButton' | translate }}
+        </button>
+        <button class="btn btn-secondary" (click)="onImportButtonClick()">
+            <i class="bi-upload me-1"></i>{{ 'dataSourcesPageImportButton' | translate }}
+        </button>
+    </div>
+</table-page>

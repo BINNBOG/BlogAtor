@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-header">{{ `${pageName}PageHeader` | translate }}</div>
+    <div class="card-body">
+        <h5 class="card-title">{{ `${pageName}PageTitle` | translate }}</h5>
+        <p class="card-text">{{ `${pageName}PageDescription` | translate }}</p>
+        <div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

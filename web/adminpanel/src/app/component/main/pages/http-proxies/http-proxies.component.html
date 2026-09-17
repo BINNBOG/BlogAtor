@@ -1,0 +1,14 @@
+<ng-template #actionsColumn let-data="adtData">
+    <button class="btn btn-danger" (click)="elementDeletter(data.id.toString())"><i class="bi-trash"></i></button>
+</ng-template>
+
+<table-page [pageName]="'proxies'" 
+            [columnOptions]="columns"
+
+            [elementsGetter]="elementsGetter.bind(that)"
+            
+            [elementDeletter]="elementDeletter.bind(that)"
+            
+            [createEntryModalComponent]="createModalComponent"
+            [elementCreator]="elementCreator.bind(that)">
+</table-page>

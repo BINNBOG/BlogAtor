@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{ 'userEditModalTitle' | translate }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        @for (role of availableRoles; track role)
+        {
+            <span class="badge rounded-pill m-1"
+                [ngClass]="{
+                    'bg-primary': hasRole(role),
+                    'bg-secondary': !hasRole(role)
+                }"
+                (click)="toggleRoleSelection(role)">
+                
+                {{ `userRoleName${role}` | translate }}
+            </span>
+        }
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="submit" 
+            class="btn btn-success"
+            (click)="saveChanges()">
+        {{ 'userEditSaveButton' | translate }}
+    </button>
+</div>

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(cd ./web/adminpanel/; npm i; ng build --output-path ../../nginx/sites/adminpanel)

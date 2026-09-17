@@ -1,0 +1,10 @@
+.column-data {
+    float: left;
+    width: 80%;
+    padding: 5px;
+}
+.column-control {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}

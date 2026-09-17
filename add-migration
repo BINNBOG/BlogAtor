@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dotnet ef migrations add $1 --project ./store/sql/BlogAtor.Store.Sql.csproj --startup-project ./runner/BlogAtor.Runner.csproj

@@ -1,0 +1,11 @@
+<ng-template #dataItemLink let-data="adtData">
+    <a href="{{ data.link }}">{{ data.title }}</a>
+</ng-template>
+
+<table-page [pageName]="'dataItems'"
+            [columnOptions]="columns"
+
+            [elementsGetter]="elementsGetter.bind(that)"
+
+            [columnOptions]="columns">
+</table-page>

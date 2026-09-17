@@ -1,0 +1,3 @@
+[submodule "rss"]
+	path = rss
+	url = git@git.ooplabs.ru:trspo/course-projects/blogator/collector/rss.git

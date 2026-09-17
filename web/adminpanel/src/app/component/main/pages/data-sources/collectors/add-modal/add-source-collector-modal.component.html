@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{ 'sourceCollectorCreateModalTitle' | translate }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<form [formGroup]="createSourceCollectorForm">
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="type">{{ 'sourceCollectorCreateModalType' | translate }}</label>
+            <select id="type" class="form-select" 
+                    formControlName="type"
+                    (change)="collectorTypeChange($event)">
+                @for (type of collectorTypes; track type)
+                {   
+                <option value="{{type}}">{{ type | translate }}</option>
+                }
+            </select>
+            <label for="url">{{ 'sourceCollectorCreateModalUrl' | translate }}</label>
+            <input type="text" 
+                    class="form-control" 
+                    id="url" 
+                    formControlName="url"
+                    placeholder="{{ 'sourceCollectorCreateModalUrlPlaceholder' | translate }}">
+
+            <div class="form-check">
+                <input type="checkbox"
+                        class="form-check-input"
+                        id="useProxy"
+                        formControlName="useProxy"/>
+                <label class="form-check-label" for="useProxy">{{ 'sourceCollectorCreateModalUseProxy' | translate }}</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" 
+                class="btn btn-success"
+                (click)="createSourceCollector()">
+            {{ 'sourceCollectorCreateModalSubmit' | translate }}
+        </button>
+    </div>
+</form>

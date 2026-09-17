@@ -1,0 +1,139 @@
+{
+    "userRoleName0" : "admin",
+    "userRoleName1" : "editor",
+    "userRoleName2" : "viewer",
+    
+    
+    "loadingHeaderPlaceholder" : "loading...",
+
+
+    "loginTitle" : "Login",
+    "loginUsername" : "Username",
+    "loginUsernamePlaceholder" : "Username",
+    "loginPassword" : "Password",
+    "loginPasswordPlaceholder" : "Password",
+    "loginLoginButton" : "Sing in",
+    "loginRegisterLink" : "Sign up",
+
+
+    "registerTitle" : "Register",
+    "registerUsername" : "Username",
+    "registerUsernamePlaceholder" : "Username",
+    "registerPassword" : "Password",
+    "registerPasswordPlaceholder" : "Password",
+    "registerPasswordConfirm" : "Confirm password",
+    "registerPasswordConfirmPlaceholder" : "Password",
+    "registerRegisterButton" : "Sing Up",
+    "registerLoginLink" : "Sign in",
+
+    
+    "sidebarTitle" : "BlogAtor",
+
+    "datasourcesLink" : "Data sources",
+    "dataitemsLink" : "Data items",
+    "usersLink" : "Users",
+    "proxiesLink" : "HTTP-proxy",
+
+    "sidebarAccountSettingsButton" : "Settings",
+    "sidebarAccountLogoutButton" : "Logout",
+    "sidebarAccountLoadingUsername" : "Loading...",
+
+    
+    "dataSourcesPageHeader" : "Data sources",
+    "dataSourcesPageTitle" : "Data sources",
+    "dataSourcesPageDescription" : "List of data sources",
+    "dataSourcesCreateEntryButton" : "Add",
+    "dataSourcesPageExportButton" : "Export",
+    "dataSourcesPageImportButton" : "Import",
+    
+    "dataSourcesColumnId" : "ID",
+    "dataSourcesColumnName" : "Name",
+    "dataSourcesColumnActions" : "",
+
+    "dataSourcereateModalTitle" : "New data source",
+    "dataSourceCreateModalName" : "Data source name",
+    "dataSourceCreateModalNamePlaceholder" : "Name",
+    "dataSourceCreateModalSubmit" : "Create",
+
+    "dataSourceImportModalTitle" : "Import data sources",
+    "dataSourceImportModalFile" : "File with data sources",
+    "dataSourceImportModalSubmit" : "Import",
+
+
+    "sourceCollectorPageHeader" : "Collectors",
+    "sourceCollectorPageTitle" : "Source collectors",
+    "sourceCollectorPageDescription" : "List of data item collectors",
+    "sourceCollectorCreateEntryButton" : "New",
+    
+    "sourceCollectorColumnId" : "ID",
+    "sourceCollectorColumnType" : "Type",
+    "sourceCollectorColumnConfig" : "Configuration",
+    "sourceCollectorColumnActions" : "",
+
+    "RssCollectorType" : "RSS",
+
+    "sourceCollectorCreateModalTitle" : "Create source collector",
+    "sourceCollectorCreateModalType" : "Collector type",
+    "sourceCollectorCreateModalTypePlaceholder" : "Type",
+    "sourceCollectorCreateModalUrl" : "RSS URL",
+    "sourceCollectorCreateModalUrlPlaceholder" : "https://some.blog/feed",
+    "sourceCollectorCreateModalUseProxy" : "Use HTTP-proxy to access feed",
+    "sourceCollectorCreateModalSubmit" : "Create",
+
+
+    "dataItemsPageHeader" : "Data items",
+    "dataItemsPageTitle" : "Data items",
+    "dataItemsPageDescription" : "List of data items",
+    
+    "dataItemsColumnId" : "Id",
+    "dataItemsColumnTitle" : "Title",
+    "dataItemsColumnUpdated" : "Updated",
+    "dataItemsColumnCollected" : "Collected",
+
+
+    "usersPageHeader" : "Users",
+    "usersPageTitle" : "Users list",
+    "usersPageDescription" : "List of users",
+    "usersColumnId" : "Id",
+    "usersColumnUsername" : "Name",
+    "usersColumnRoles" : "Roles",
+    "usersColumnActions" : "",
+
+    "userEditModalTitle" : "Edit user",
+    "userEditSaveButton" : "Save",
+
+    "DropAdminRoleProhibitedWarning" : "A privelege deescalation attempt prevented",
+
+
+    "proxiesPageHeader" : "HTTP-proxies",
+    "proxiesPageTitle" : "HTTP-proxies configuration",
+    "proxiesPageDescription" : "List of HTTP-proxy configurations",
+    "proxiesCreateEntryButton" : "Add proxy",
+    
+    "proxiesColumnId" : "Id",
+    "proxiesColumnUrl" : "URL",
+    "proxiesColumnAuth" : "Authenticated",
+    "proxiesColumnUsername" : "Username",
+    "proxiesColumnActions" : "",
+
+    "proxyConfigCreateModalTitle" : "Add HTTP-proxy",
+    "proxyConfigCreateModalUrl" : "HTTP-proxy URL",
+    "proxyConfigCreateModalUrlPlaceholder" : "http://proxy.com",
+    "proxyConfigCreateModalAuth" : "Use authentication",
+    "proxyConfigCreateModalUsername" : "Username",
+    "proxyConfigCreateModalUsernamePlaceholder" : "user",
+    "proxyConfigCreateModalPassword" : "Password",
+    "proxyConfigCreateModalPasswordPlaceholder" : "password",
+    "proxyConfigCreateModalSubmit" : "Add",
+
+
+    "EmptyLoginFormError" : "Enter login data",
+    "AuthenticationError" : "Authetnication error",
+
+    "RegisterEmptyFormError" : "Enter registration data",
+    "RegisterPasswordsDoNotMatchError" : "Passwords do not match",
+
+
+    "LoginSuccessMessage" : "Login successfull",
+    "RegistrationSuccessfullMessage" : "Registration was successfull"
+}

@@ -1,0 +1,28 @@
+services:
+  blogator:
+    build:
+      context: .
+    volumes:
+      - ./StartupConfig.json:/etc/blogator/StartupConfig.json:ro"
+    ports:
+      - 8080:8080
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: $DB_USER
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_PASSWORD: $DB_PWD
+  web:
+    image: nginx
+    volumes:
+      - "./nginx/templates:/etc/nginx/templates"
+      - "./nginx/sites:/www/sites"
+    ports:
+      - 80:80
+    environment:
+      - NGINX_HOST=blogator.local
+      - NGINX_PORT=80

@@ -1,0 +1,140 @@
+{
+    "userRoleName0" : "администратор",
+    "userRoleName1" : "редактор",
+    "userRoleName2" : "читатель",
+    
+    
+    "loadingHeaderPlaceholder" : "загрузка...",
+
+
+    "loginTitle" : "Аутентификация",
+    "loginUsername" : "Имя пользователя",
+    "loginUsernamePlaceholder" : "Username",
+    "loginPassword" : "Пароль",
+    "loginPasswordPlaceholder" : "Password",
+    "loginLoginButton" : "Вход",
+    "loginRegisterLink" : "Регистрация",
+
+
+    "registerTitle" : "Регистрация",
+    "registerUsername" : "Имя пользователя",
+    "registerUsernamePlaceholder" : "Username",
+    "registerPassword" : "Пароль",
+    "registerPasswordPlaceholder" : "Password",
+    "registerPasswordConfirm" : "Подтверждение пароля",
+    "registerPasswordConfirmPlaceholder" : "Password",
+    "registerRegisterButton" : "Регистрация",
+    "registerLoginLink" : "Вход",
+
+
+    "sidebarTitle" : "BlogAtor",
+
+    "datasourcesLink" : "Источники",
+    "dataitemsLink" : "Данные",
+    "usersLink" : "Пользователи",
+    "proxiesLink" : "HTTP-прокси",
+
+    "sidebarAccountSettingsButton" : "Настройки",
+    "sidebarAccountLogoutButton" : "Выход",
+    "sidebarAccountLoadingUsername" : "Загрузка...",
+
+
+    "dataSourcesPageHeader" : "Источники данных",
+    "dataSourcesPageTitle" : "Источники данных",
+    "dataSourcesPageDescription" : "Перечень источинков данных",
+    "dataSourcesCreateEntryButton" : "Добавить",
+
+    "dataSourcesColumnId" : "Id",
+    "dataSourcesColumnName" : "Название",
+    "dataSourcesColumnActions" : "",
+
+    "dataSourcereateModalTitle" : "Новый источник данных",
+    "dataSourceCreateModalName" : "Названия источинка данных",
+    "dataSourceCreateModalNamePlaceholder" : "Название",
+    "dataSourceCreateModalSubmit" : "Создать",
+    "dataSourcesPageExportButton" : "Экспорт",
+    "dataSourcesPageImportButton" : "Импорт",
+
+    "dataSourceImportModalTitle" : "Импорт истончиков",
+    "dataSourceImportModalFile" : "Файл с источниками",
+    "dataSourceImportModalSubmit" : "Импортировать",
+
+
+    "sourceCollectorPageHeaderDataSourceLink" : "Источники Данных",
+    "sourceCollectorPageHeader" : "Сборщики",
+    "sourceCollectorPageTitle" : "Сборщики данных",
+    "sourceCollectorPageDescription" : "Перечень сборщиков данных из источников",
+    "sourceCollectorCreateEntryButton" : "Добавить",
+
+    "sourceCollectorColumnId" : "Id",
+    "sourceCollectorColumnType" : "Тип сборщика",
+    "sourceCollectorColumnConfig" : "Конфигурация",
+    "sourceCollectorColumnActions" : "",
+
+    "RssCollectorType" : "RSS",
+
+    "sourceCollectorCreateModalTitle" : "Новый сборщик данных",
+    "sourceCollectorCreateModalType" : "Тип сборщика",
+    "sourceCollectorCreateModalTypePlaceholder" : "Тип",
+    "sourceCollectorCreateModalUrl" : "URL-путь к RSS-фиду",
+    "sourceCollectorCreateModalUrlPlaceholder" : "https://some.blog/feed",
+    "sourceCollectorCreateModalUseProxy" : "Использовать HTTP-прокси",
+    "sourceCollectorCreateModalSubmit" : "Создать",
+
+
+    "dataItemsPageHeader" : "Данные",
+    "dataItemsPageTitle" : "Днные",
+    "dataItemsPageDescription" : "Перечень данных, собранных из источников",
+
+    "dataItemsColumnId" : "Id",
+    "dataItemsColumnTitle" : "Заголовок",
+    "dataItemsColumnUpdated" : "Дата обновления",
+    "dataItemsColumnCollected" : "Дата получения",
+
+
+    "usersPageHeader" : "Пользователи",
+    "usersPageTitle" : "Перечень пользователей",
+    "usersPageDescription" : "Перечень зарегестрированных пользователей",
+    "usersColumnId" : "Id",
+    "usersColumnUsername" : "Логин",
+    "usersColumnRoles" : "Роли",
+    "usersColumnActions" : "",
+
+    "userEditModalTitle" : "Настройки пользователя",
+    "userEditSaveButton" : "Сохранить",
+
+    "DropAdminRoleProhibitedWarning" : "Понижение привилегий запрещено",
+
+
+    "proxiesPageHeader" : "HTTP-прокси",
+    "proxiesPageTitle" : "Конфигурации HTTP-прокси",
+    "proxiesPageDescription" : "Перечень настроенных HTTP-прокси",
+    "proxiesCreateEntryButton" : "Добавить HTTP-прокси",
+
+    "proxiesColumnId" : "Id",
+    "proxiesColumnUrl" : "URL",
+    "proxiesColumnAuth" : "Аутентификация",
+    "proxiesColumnUsername" : "Логин",
+    "proxiesColumnActions" : "",
+
+    "proxyConfigCreateModalTitle" : "Добавление HTTP-прокси",
+    "proxyConfigCreateModalUrl" : "URL-адрес HTTP-прокси",
+    "proxyConfigCreateModalUrlPlaceholder" : "http://proxy.com",
+    "proxyConfigCreateModalAuth" : "Требуется аутентификация",
+    "proxyConfigCreateModalUsername" : "Имя пользователя",
+    "proxyConfigCreateModalUsernamePlaceholder" : "user",
+    "proxyConfigCreateModalPassword" : "Пароль",
+    "proxyConfigCreateModalPasswordPlaceholder" : "password",
+    "proxyConfigCreateModalSubmit" : "Добавить",
+
+
+    "EmptyLoginFormError" : "Введите аутентификационные данные",
+    "AuthenticationError" : "Ошибка аутентификации",
+
+    "RegisterEmptyError" : "Введите данные для регистрации",
+    "RegisterPasswordsDoNotMatchError" : "Пароли не совпадают",
+
+
+    "LoginSuccessMessage" : "Успешная аутентификация",
+    "RegistrationSuccessfullMessage" : "Регистрация завершена успешно"
+}

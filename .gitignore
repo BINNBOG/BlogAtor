@@ -1,0 +1,8 @@
+.VSCodeCounter/
+
+obj/
+bin/
+node_modules/
+dist/
+
+.env

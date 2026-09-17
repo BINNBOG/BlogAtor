@@ -1,0 +1,22 @@
+<ng-template #rolesColumn let-data="adtData">
+    @for (role of data.roles; track role)
+    {
+    <span class="badge rounded-pill bg-primary me-1 mb-1">{{ `userRoleName${role}` | translate }}</span>
+    }
+</ng-template>
+
+<ng-template #actionsColumn let-data="adtData">
+    <div>
+        <button class="btn btn-primary me-1"
+            (click)="onEditUserClick(data)"><i class="bi-gear"></i></button>
+        <button class="btn btn-danger" 
+            [disabled]="currentUserId == data.user.id"
+            (click)="elementDeletter(data.user)"><i class="bi-trash"></i></button>
+    </div>
+</ng-template>
+
+<table-page [pageName]="'users'" 
+            [elementsGetter]="elementsGetter.bind(that)"
+
+            [columnOptions]="columns">
+</table-page>

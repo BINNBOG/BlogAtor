@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Abstractions\BlogAtor.Collector.Abstractions.csproj" />
+    <ProjectReference Include="..\Configuration\BlogAtor.Collector.Configuration.csproj" />
+    <ProjectReference Include="..\..\framework\BlogAtor.Framework.csproj" />
+    <ProjectReference Include="..\..\store\Abstractions\BlogAtor.Store.Abstractions.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
