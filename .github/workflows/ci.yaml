@@ -74,3 +74,48 @@ jobs:
         with:
           sarif_file: semgrep-results.sarif
           category: semgrep
+
+  sca:
+    needs: build
+
+    permissions:
+      contents: read
+      security-events: write
+
+    name: SCA - Snyk
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install frontend dependencies
+        working-directory: web/adminpanel
+        run: npm ci
+
+      - name: Install Snyk
+        run: npm install -g snyk
+
+      - name: Run Snyk SCA
+        working-directory: web/adminpanel
+        run: snyk test --sarif-file-output=snyk-results.sarif
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        continue-on-error: true
+
+      - name: Upload Snyk results
+        uses: actions/upload-artifact@v4
+        with:
+          name: snyk-sca-results
+          path: web/adminpanel/snyk-results.sarif
+      
+      - name: Upload Snyk results to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: web/adminpanel/snyk-results.sarif
+          category: snyk
