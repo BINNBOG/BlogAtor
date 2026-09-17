@@ -1,0 +1,41 @@
+name: BlogAtor CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore .NET dependencies
+        run: dotnet restore BlogAtor.sln
+
+      - name: Build .NET project
+        run: dotnet build BlogAtor.sln --configuration Release --no-restore
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: web/adminpanel/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: web/adminpanel
+        run: npm ci
+
+      - name: Build Angular frontend
+        working-directory: web/adminpanel
+        run: npm run build
