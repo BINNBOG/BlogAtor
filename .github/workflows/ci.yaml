@@ -58,7 +58,7 @@ jobs:
         run: pip install semgrep
 
       - name: Run Semgrep SAST for C#
-        run: semgrep scan --config=auto --lang=csharp --sarif --output=semgrep-results.sarif .
+        run: semgrep scan --lang=csharp --sarif --output=semgrep-results.sarif .
         continue-on-error: true
 
       - name: Upload Semgrep results
