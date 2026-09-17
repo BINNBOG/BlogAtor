@@ -39,3 +39,36 @@ jobs:
       - name: Build Angular frontend
         working-directory: web/adminpanel
         run: npm run build
+  
+  sast:
+    needs: build
+
+    name: SAST - Semgrep
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      - name: Run Semgrep SAST for C#
+        run: semgrep scan --config=auto --lang=csharp --sarif --output=semgrep-results.sarif .
+        continue-on-error: true
+
+      - name: Upload Semgrep results
+        uses: actions/upload-artifact@v4
+        with:
+          name: semgrep-sast-results
+          path: semgrep-results.sarif
+
+      - name: Upload results to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: semgrep-results.sarif
+          category: semgrep
